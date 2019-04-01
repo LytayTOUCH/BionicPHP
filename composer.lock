@@ -4,8 +4,56 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "94d4bf9ac7f4a933030e46a346ee2917",
+    "content-hash": "42bd81fa3377fa553372a76e2162fa7d",
     "packages": [
+        {
+            "name": "aseancode/dbcommands",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/LytayTOUCH/laravel-dbcommands.git",
+                "reference": "4043aae9e9810261e10abc34c0b3117265392618"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/LytayTOUCH/laravel-dbcommands/zipball/4043aae9e9810261e10abc34c0b3117265392618",
+                "reference": "4043aae9e9810261e10abc34c0b3117265392618",
+                "shasum": ""
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "AseanCode\\DbCommands\\DbCommandsServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "AseanCode\\DbCommands\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Lytay",
+                    "email": "lytaytouch@gmail.com",
+                    "homepage": "https://github.com/LytayTOUCH"
+                }
+            ],
+            "description": "laravel command to create/drop database(MySQL)",
+            "homepage": "https://github.com/LytayTOUCH/laravel-dbcommands",
+            "keywords": [
+                "command",
+                "create",
+                "database",
+                "laravel"
+            ],
+            "time": "2019-03-06T06:22:12+00:00"
+        },
         {
             "name": "dnoegel/php-xdg-base-dir",
             "version": "0.1",
@@ -4395,7 +4443,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "aseancode/dbcommands": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
