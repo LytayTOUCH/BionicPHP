@@ -14,3 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::prefix('playgrounds')->group(function(){
+    Route::get('/first','PlaygroundController@play_first_ground')->name('firstpage');
+});
