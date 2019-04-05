@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">First Ground</div>
+                <div class="card-header">Second Ground</div>
                 
                 <div class="card-body">
                     @if (session('status'))
@@ -13,8 +13,7 @@
                         {{ session('status') }}
                     </div>
                     @endif
-                    First Play Ground <span class = "label label-primary label_number">0</span>
-
+                    Second Play Ground
                 </div>
             </div>
         </div>
@@ -23,15 +22,11 @@
 @endsection
 @section('scriptjs')
 <script>
-    var $i=0;
-window.runMe=function(params){
-    console.log('function runMe is loaded with params',params);
-    console.log(params);
-    $(document).ready(function(){
-        console.log('document ready');
-        console.log($('.label_number'));
-        $('.label_number').text($i++);
-    });
-}
+    // console.log( window.Echo.channel('NotifyProductStatus') );
+    // window.Echo.channel('NotifyProductStatus').listen('WebsocketNotifyProductStatus', function (e) {
+    //     console.log('load listen NotifyProductStatus');
+    //     console.log(e);
+    // });
+    
 </script>
 @endsection

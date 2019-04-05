@@ -48,3 +48,16 @@ window.Echo = new Echo({
     wsPort: 6001,
     disableStats: true,
 });
+
+window.Echo.channel('NotifyEvent').listen('WebsocketNotifyEvent', function (payload) {
+    console.log('load listen NotifyEvent');
+    console.log(payload);
+});
+
+window.Echo.channel('NotifyProductStatus').listen('WebsocketNotifyProductStatus', (payload) => {
+    console.log('load listen NotifyProductStatus');
+    console.log(payload);
+    if (typeof window[payload.fun_one] === "function") window[payload.fun_one].apply(null, payload.params);
+
+
+});
